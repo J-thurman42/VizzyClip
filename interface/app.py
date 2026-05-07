@@ -1,6 +1,6 @@
 from customtkinter import CTk
 import settings.settings as sett
-import interface.widgets.widgets as wid
+import widgets.widgets as wid
 
 class MainWindow(CTk):
     """Represents the Main Window object that houses all layouts and the app's primary interface"""
