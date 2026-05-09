@@ -19,7 +19,7 @@ class SettingsManager():
 
         # DEFAULT ON-SCREEN TEXT
         self.ENTRY_LABELS = ['Enter text here...'] * 8
-        self.LABELS = [f'Label-{i}' for i in range(8)]
+        self.LABELS = [f'Label-{i+1}' for i in range(8)]
         self.LABEL_FONT = ("Cambria", 12)
         self.BUTTON_FONT = ("Cambria", 10)
         self.ENTRY_FONT = ("Cambria", 12)

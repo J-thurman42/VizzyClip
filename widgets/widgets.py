@@ -43,8 +43,8 @@ class LabelEntryCCB(CTkFrame):
         self.buttons: list[CTkButton] = []
 
         self.columnconfigure(0, weight=1)
-        self.columnconfigure(1, weight=98)
-        self.columnconfigure(2, weight=98)
+        self.columnconfigure(1, weight=100)
+        self.columnconfigure(2, weight=100)
         self.columnconfigure(3, weight=1)
 
         for num in range(4):
@@ -74,7 +74,7 @@ class LabelEntryCCB(CTkFrame):
 
         # Section-level buttons — kept as instance attributes for color refresh
         self.copy_section_button = CTkButton(
-            self, text='Copy Section',
+            self, text='COPY SECTION ^',
             text_color=s.BUTTON_TEXT_COLOR,
             font=s.BUTTON_FONT, width=10, height=20,
             fg_color=s.BUTTON_COLOR,
@@ -82,19 +82,19 @@ class LabelEntryCCB(CTkFrame):
             command=self.copy_entries,
         )
         self.copy_section_button.grid(
-            column=0, row=4, padx=2, pady=1, columnspan=2
+            column=0, row=4, padx=(2,0), pady=1, columnspan=2, sticky='EW'
         )
 
         self.clear_section_button = CTkButton(
-            self, text='Clear Section',
+            self, text='CLEAR SECTION ^',
             text_color=s.BUTTON_TEXT_COLOR,
             font=s.BUTTON_FONT, width=10, height=20,
             fg_color=s.BUTTON_COLOR,
-            hover_color=s.BUTTON_HOVER_COLOR,
+            hover_color='RED',
             command=self.clear_entries,
         )
         self.clear_section_button.grid(
-            column=2, row=4, padx=2, pady=1, columnspan=2
+            column=2, row=4, padx=2, pady=1, columnspan=2, sticky='EW'
         )
 
     def copy_entries(self) -> None:
